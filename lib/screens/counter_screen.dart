@@ -34,7 +34,6 @@ class _CounterScreenState extends State<CounterScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("counter screen"),
-        elevation: 1.0,
       ),
       body: Center(
         child: Column(
@@ -74,16 +73,19 @@ class CustomFloatingActions extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         FloatingActionButton(
+          heroTag: "btn1",
           onPressed: () => increaseFn(),
           tooltip: 'Increment Counter',
           child: const Icon(Icons.add),
         ),
         FloatingActionButton(
+          heroTag: "btn2",
           onPressed: () => decreaseFn(),
           tooltip: 'Increment Counter',
           child: const Icon(Icons.exposure_minus_1),
         ),
         FloatingActionButton(
+          heroTag: "btn3",
           onPressed: () => restartFn(),
           tooltip: 'Increment Counter',
           child: const Icon(Icons.tv),
