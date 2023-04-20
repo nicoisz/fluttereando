@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/models/menu_option.dart';
 import 'package:my_app/router/router.dart';
 import 'package:my_app/theme/app_theme.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   //int _count = 0;
   @override
   Widget build(BuildContext context) {

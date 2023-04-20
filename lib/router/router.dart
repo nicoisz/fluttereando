@@ -21,8 +21,11 @@ class AppRoutes {
         icon: Icons.countertops,
         name: 'counter',
         screen: const CounterScreen()),
-    MenuOptions(
-        route: 'home', icon: Icons.home, name: 'home', screen: HomeScreen()),
+    // MenuOptions(
+    //     route: 'home',
+    //     icon: Icons.home,
+    //     name: 'home',
+    //     screen: const HomeScreen()),
     MenuOptions(
         route: 'listView1',
         icon: Icons.list,
@@ -32,7 +35,12 @@ class AppRoutes {
         route: 'listView2',
         icon: Icons.list_alt,
         name: 'listView2',
-        screen: const Listview2Screen())
+        screen: const Listview2Screen()),
+    MenuOptions(
+        route: 'animated',
+        icon: Icons.play_arrow_outlined,
+        name: 'animatedScreen',
+        screen: const AnimatedScreen())
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
@@ -49,14 +57,15 @@ class AppRoutes {
     'alerta': (BuildContext context) => const Alertscreen(),
     'card': (BuildContext context) => const CardScreen(),
     'counter': (BuildContext context) => const CounterScreen(),
-    'home': (BuildContext context) => HomeScreen(),
+    'home': (BuildContext context) => const HomeScreen(),
     'listView1': (BuildContext context) => const Listview1Screen(),
-    'listView2': (BuildContext context) => const Listview2Screen()
+    'listView2': (BuildContext context) => const Listview2Screen(),
+    'animated': (BuildContext context) => const AnimatedScreen()
   };
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     return MaterialPageRoute(
-      builder: (context) => const Alertscreen(),
+      builder: (context) => const HomeScreen(),
     );
   }
 }
