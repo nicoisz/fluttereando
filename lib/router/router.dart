@@ -40,7 +40,17 @@ class AppRoutes {
         route: 'animated',
         icon: Icons.play_arrow_outlined,
         name: 'animatedScreen',
-        screen: const AnimatedScreen())
+        screen: const AnimatedScreen()),
+    MenuOptions(
+        route: 'input',
+        icon: Icons.text_fields,
+        name: 'inputScreen',
+        screen: const InputForm()),
+    MenuOptions(
+        route: 'slider',
+        icon: Icons.sledding_rounded,
+        name: 'SliderScreen',
+        screen: const SliderScreen())
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
@@ -60,7 +70,9 @@ class AppRoutes {
     'home': (BuildContext context) => const HomeScreen(),
     'listView1': (BuildContext context) => const Listview1Screen(),
     'listView2': (BuildContext context) => const Listview2Screen(),
-    'animated': (BuildContext context) => const AnimatedScreen()
+    'animated': (BuildContext context) => const AnimatedScreen(),
+    'input': (BuildContext context) => const InputForm(),
+    'slider': (BuildContext context) => const SliderScreen(),
   };
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {

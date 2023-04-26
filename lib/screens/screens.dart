@@ -5,3 +5,5 @@ export 'package:my_app/screens/home_screen.dart';
 export 'package:my_app/screens/listview1_screen.dart';
 export 'package:my_app/screens/listview2_screen.dart';
 export 'package:my_app/screens/animated_screen.dart';
+export 'package:my_app/screens/slider_screen.dart';
+export 'package:my_app/screens/input_screen.dart';
