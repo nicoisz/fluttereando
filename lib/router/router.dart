@@ -50,6 +50,11 @@ class AppRoutes {
         route: 'slider',
         icon: Icons.sledding_rounded,
         name: 'SliderScreen',
+        screen: const SliderScreen()),
+    MenuOptions(
+        route: 'listViewBuilder',
+        icon: Icons.build,
+        name: 'listViewBuilderScreen',
         screen: const SliderScreen())
   ];
 
@@ -73,6 +78,7 @@ class AppRoutes {
     'animated': (BuildContext context) => const AnimatedScreen(),
     'input': (BuildContext context) => const InputForm(),
     'slider': (BuildContext context) => const SliderScreen(),
+    'listViewBuilder': (BuildContext context) => const ListViewBuilderScreen(),
   };
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {

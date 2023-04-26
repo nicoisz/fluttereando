@@ -56,9 +56,11 @@ class _SliderScreenState extends State<SliderScreen> {
                 activeColor: AppTheme.primary,
                 value: _sliderEnabled,
                 onChanged: (value) => setState(() {
-                      _sliderEnabled = value ?? true;
+                      _sliderEnabled = value;
                     })),
-            const AboutListTile(),
+            const AboutListTile(
+              applicationName: "Learning Flutter",
+            ),
             Image(
               image: const NetworkImage(
                   'https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/e/e1/Tanjiro_anime.png/revision/latest?cb=20230117090856'),
